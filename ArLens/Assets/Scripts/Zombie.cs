@@ -5,9 +5,9 @@ using UnityEngine.UI;
 public class Zombie : MonoBehaviour, INPC
 {
     public int maxHp;
-    public int hp;
+    int hp;
     public Slider HealthBar;
-    public killTarget1 killTarget1;
+    public GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,10 +26,10 @@ public class Zombie : MonoBehaviour, INPC
     public void TakeDamage(int damage)
     {
         hp-= damage;
-        if (hp < 0)
+        if (hp <= 0)
         {
             die();
-        }
+        }        
     }
     void OnCollisionEnter(Collision collider)
     {
@@ -41,13 +41,13 @@ public class Zombie : MonoBehaviour, INPC
     void die()
     {
         SetRandomPosition();
-        killTarget1.score++;
+        gameManager.score++;
     }
     void SetRandomPosition()
     {
-        float x = Random.Range(-5.0f, 5.0f);
-        float z = Random.Range(-25.0f, 5.0f);
-        transform.position = new Vector3(x, 0.0f, z);
+        float x = Random.Range(-2.0f, 2.0f);
+        float z = Random.Range(3.0f, 5.0f);
+        transform.position = new Vector3(x, 1f, z);
         Start();
     }
 }

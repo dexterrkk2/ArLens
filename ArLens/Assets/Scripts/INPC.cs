@@ -8,4 +8,8 @@ public interface INPC
     {
 
     }
+    public void die()
+    {
+
+    }
 }

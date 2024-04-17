@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lens.unity
     guid: c6f5c25c4acc37e41a688e583590fc33
+  - enabled: 1
+    path: Assets/Scenes/End scredits.unity
+    guid: 108f2f29e1b0e264cb6a423001fea18f
+  - enabled: 1
+    path: Assets/Scenes/LoseScreen.unity
+    guid: 23c8cb0349bb3ca42889d9d34d313968
   m_configObjects:
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 2f27bfa149456aa419b9fa7a608db55a, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 9cfa46b80a6600c4e8778d2a8c752bd7, type: 2}
