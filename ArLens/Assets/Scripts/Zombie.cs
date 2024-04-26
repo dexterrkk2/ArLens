@@ -8,9 +8,11 @@ public class Zombie : MonoBehaviour, INPC
     int hp;
     public Slider HealthBar;
     public GameManager gameManager;
+    public ISoundObject deathSound;
     // Start is called before the first frame update
     void Start()
     {
+        deathSound = GetComponent<ISoundObject>();
         hp = maxHp;
         HealthBar.maxValue = maxHp;
     }
@@ -40,6 +42,7 @@ public class Zombie : MonoBehaviour, INPC
     }
     void die()
     {
+        deathSound.Play();
         SetRandomPosition();
         gameManager.score++;
     }
